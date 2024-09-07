@@ -1,0 +1,53 @@
+body,html {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height: 100dvh;
+            background-color: #F9F9F9;
+        }
+        .container {
+            width: 90%;
+            max-width: 256px;
+            aspect-ratio: 1 / 1;
+        }
+        @keyframes svg-path {
+            0% {
+                stroke-dasharray: 0 400;
+                stroke-width: 50;
+            }
+            to {
+                stroke-dasharray: 400 0;
+                stroke-width: 20;
+            }
+        }
+        @keyframes svg-circle {
+            0% {
+                stroke-dasharray: 0 2023;
+                stroke-width: 50;
+            }
+            to {
+                stroke-dasharray: 2023 0;
+                stroke-width: 20
+            }
+        }
+
+
+        .svg {
+            fill: none;
+            stroke: #198754;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 20;
+            transform-origin: 50% 50%;
+        }
+        .circle {
+            stroke-dasharray: 2023;
+            stroke-dashoffset: 2023;
+            transform: rotate(-90deg);
+            animation: 1s ease-in-out 0.5s 1 normal forwards running svg-circle;
+        }
+        .path {
+            stroke-dasharray: 400;
+            stroke-dashoffset: 400;
+            animation: 0.5s ease-in-out 1s 1 normal forwards running svg-path;
+        }
